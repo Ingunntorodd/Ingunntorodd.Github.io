@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="Uke 10.css">
+    <!-- Lager kobling til databasen i firebase-->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCF3QtVKvzBnJOJ6U58HA_0TvOn9WkpzT0",
+          authDomain: "uke-4-f6735.firebaseapp.com",
+          databaseURL: "https://uke-4-f6735.firebaseio.com",
+          projectId: "uke-4-f6735",
+          storageBucket: "uke-4-f6735.appspot.com",
+          messagingSenderId: "1044910379836",
+          appId: "1:1044910379836:web:a41c8955008a222f128439",
+          measurementId: "G-YVG0XG0E2M"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+</script>
+  </head>
+
+  <body>
+    <h1>Chat!</h1>
+
+    <div id="divInpt">
+      <input type="text" id="inpNavn" placeholder="Burkernavn">
+      <input type="text" id="inpMeld" placeholder="Skriv melding her">
+      <button type="button" id="btnMeld" onclick="LeggTilMeld()">Send!</button>
+      <button type="button" id="btnSlett" onclick="slettHistorikk()">Fjern meldingshistorikk</button>
+    </div>
+
+    <div id="meldinger"></div>
+    <script src="Uke 10.js"></script>
+
+  </body>
+</html>
